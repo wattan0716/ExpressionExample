@@ -18,7 +18,7 @@ namespace ExpressionSample
         {
             var argsType = new[] { typeof(T1), typeof(T2) };
             var constructor = typeof(TInstance).GetConstructor(BindingFlags.Public | BindingFlags.Instance, Type.DefaultBinder, argsType, null);
-            var args = argsType.Select(Expression.Parameter);
+            var args = argsType.Select(Expression.Parameter).ToList();
             return Expression.Lambda<Func<T1, T2, TInstance>>(Expression.New(constructor, args), args).Compile();
         }
     }
