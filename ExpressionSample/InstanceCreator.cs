@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ExpressionSample
 {
-    public static class InstanceCreater<T1, T2, TInstance>
+    public static class InstanceCreator<T1, T2, TInstance>
     {
         /// <summary>
         /// 二つの引数を受け取ってTInstance型のインスタンスを生成します
@@ -23,7 +23,7 @@ namespace ExpressionSample
         }
     }
 
-    public static class InstanceCreater<TParam, TInstance>
+    public static class InstanceCreator<TParam, TInstance>
     {
         /// <summary>
         /// 一つの引数を受け取ってTInstance型のインスタンスを生成します
@@ -38,7 +38,7 @@ namespace ExpressionSample
         }
     }
 
-    public static class InstanceCreater<TInstance>
+    public static class InstanceCreator<TInstance>
     {
         /// <summary>
         /// TInstance型のインスタンスを生成します

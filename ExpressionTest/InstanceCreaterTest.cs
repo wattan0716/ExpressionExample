@@ -12,7 +12,7 @@ namespace ExpressionTest
         public void Newと動的に生成したインスタンスが同じであること()
         {
             var person = new Person();
-            var expressionPerson = InstanceCreater<Person>.Create();
+            var expressionPerson = InstanceCreator<Person>.Create();
             Assert.AreEqual(person.GetType(), expressionPerson.GetType());
         }
 
@@ -20,7 +20,7 @@ namespace ExpressionTest
         public void Newと動的に生成したインスタンスが同じであること_引数がひとつ()
         {
             var student = new Student("Test");
-            var expressionStudent = InstanceCreater<string, Student>.Create("Test");
+            var expressionStudent = InstanceCreator<string, Student>.Create("Test");
             Assert.AreEqual(student.Name, expressionStudent.Name);
         }
 
@@ -28,7 +28,7 @@ namespace ExpressionTest
         public void Newと動的に生成したインスタンスが同じであること_引数が二つ()
         {
             var teacher = new Teacher("Test", 25);
-            var expressionTeacher = InstanceCreater<string, int, Teacher>.Create("Test", 25);
+            var expressionTeacher = InstanceCreator<string, int, Teacher>.Create("Test", 25);
 
             Assert.AreEqual(teacher.Name, expressionTeacher.Name);
             Assert.AreEqual(teacher.Age, expressionTeacher.Age);
